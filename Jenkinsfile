@@ -11,9 +11,9 @@ node{
    
    stage("Tag & Push image"){
       withDockerRegistry(credentialsId: 'dockerID', toolName: 'Docker', url: 'https://hub.docker.com/'){
-          sh 'docker tag amritasthampi/internorg-jenkins-docker amritasthampi/internorg-jenkins-docker:dev'
-          sh 'docker push amritasthampi/internorg-jenkins-docker:dev'
-          sh 'docker push amritasthampi/internorg-jenkins-docker:latest'
+          sh 'docker tag amritasthampi/internorg-assign amritasthampi/internorg-assignr:dev'
+          sh 'docker push amritasthampi/internorg-assign:dev'
+          sh 'docker push amritasthampi/internorg-assign:latest'
       }
     }
     stage("App deployment started"){
