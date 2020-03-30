@@ -1,7 +1,7 @@
 # Use an official Python runtime as a parent image
 FROM python:latest
 
-MAINTAINER AMRITA
+MAINTAINER AMRITA S THAMPI
 
 # Set the working directory to /app
 WORKDIR /app
