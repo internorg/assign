@@ -6,14 +6,14 @@ node{
       }
    
    stage('Docker Build') {
-     def app = docker.build "amritasthampi/internorg/assign"
+     def app = docker.build "amritasthampi/internorg-jenkins-docker"
     }
    
    stage("Tag & Push image"){
       withDockerRegistry([credentialsId: 'github-docker',url: "https://hub.docker.com/"]) {
-          sh 'docker tag amritasthampi/internorg-assign amritasthampi/internorg-assign:dev'
-          sh 'docker push amritasthampi/internorg-assign:dev'
-          sh 'docker push amritasthampi/internorg-assign:latest'
+          sh 'docker tag amritasthampi/internorg-jenkins-docker amritasthampi/internorg-jenkins-docker:dev'
+          sh 'docker push amritasthampi/internorg-jenkins-docker:dev'
+          sh 'docker push amritasthampi/internorg-jenkins-docker:latest'
       }
     }
     stage("App deployment started"){
