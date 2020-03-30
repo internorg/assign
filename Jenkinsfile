@@ -10,7 +10,7 @@ node{
     }
    
    stage("Tag & Push image"){
-      withDockerRegistry(credentialsId: 'gitID', url: 'https://hub.docker.com/'){
+      withDockerRegistry(credentialsId: 'dockerID', url: 'https://hub.docker.com/u/amritasthampi'){
           sh 'docker tag amritasthampi/internorg-assign amritasthampi/internorg-assignr:dev'
           sh 'docker push amritasthampi/internorg-assign:dev'
           sh 'docker push amritasthampi/internorg-assign:latest'
