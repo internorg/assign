@@ -6,7 +6,7 @@ node{
       }
    
    stage('Docker Build') {
-     def app = docker.build "amritasthampi/internorg-jenkins-docker"
+     def app = docker.build "amritasthampi/internorg-assign"
     }
    
    stage("Tag & Push image"){
