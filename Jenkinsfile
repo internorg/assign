@@ -11,7 +11,7 @@ node{
    
    stage("Tag & Push image"){
       withDockerRegistry(credentialsId: 'dockerID', url: ""){
-          sh 'docker tag amritasthampi/internorg-assign amritasthampi/internorg-assignr:dev'
+          sh 'docker tag amritasthampi/internorg-assign:dev'
           sh 'docker push amritasthampi/internorg-assign:dev'
           sh 'docker push amritasthampi/internorg-assign:latest'
       }
